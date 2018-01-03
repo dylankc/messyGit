@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Dylan/turnOn.cs">
+    <Files>
+      <File FileName="Assets/Dylan/lightoff.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ArrayColor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Dylan/turnOn.cs" Line="5" Column="1" />
+      <File FileName="Assets/Dylan/guiShow.js" Line="1" Column="1" />
+      <File FileName="Assets/Dylan/textpopup.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

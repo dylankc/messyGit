@@ -1,0 +1,98 @@
+Sub FreshData()
+'
+' FreshData Macro
+
+    Columns("E:P").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("F:G").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("K:T").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("M:U").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("R:U").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("S:S").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("T:T").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("W:AH").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("X:X").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("Y:Y").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("Z:Z").Select
+    Selection.Delete Shift:=xlToLeft
+End Sub
+Sub FresherData()
+'
+' FresherData Macro
+'
+
+'
+    Cells.Find(What:="Orig_Manager_Name", After:=ActiveCell, LookIn:= _
+        xlFormulas, LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:= _
+        xlNext, MatchCase:=False, SearchFormat:=False).Activate
+    Columns("V:V").Select
+    Columns("W:W").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Range("W1").Select
+    ActiveCell.FormulaR1C1 = "Orig_Manager_PL"
+    Range("X1").Select
+    ActiveCell.FormulaR1C1 = "Orig_Director_Name"
+    Range("Y1").Select
+    ActiveCell.FormulaR1C1 = "Orig_Director_PL"
+    Range("A1").Select
+    
+    Cells.Find(What:="OriginatorLogon", After:=ActiveCell, LookIn:= _
+        xlFormulas, LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:= _
+        xlNext, MatchCase:=False, SearchFormat:=False).Activate
+        
+    Range("T2").Select
+    
+   'Dim x As Integer
+    
+    
+    'Dim rngA As Range
+    'Dim cell As Range
+
+    'Set rngA = Sheets("NewPipeline").Range("T2:T1000")
+    'For Each cell In rngA
+    '    If cell.Value <> "" Then
+    '        ActiveCell.Offset(0, 1).Select
+    '        'x = ActiveCell.Value
+            
+    '    End If
+    'Next cell
+End Sub
+
+Sub Open_Internet_Explorer()
+
+Dim ie As Object
+Dim sURL As String
+sURL = "http://www.google.com/"
+Set ie = CreateObject("InternetExplorer.Application")
+
+With ie
+
+.Left = 150
+.Top = 150
+.Height = 600
+.Width = 700
+.MenuBar = 1
+.Toolbar = 1
+.StatusBar = 1
+.Navigate sURL
+
+.Visible = 1
+
+Application.Wait (Now + TimeValue("00:00:03"))
+
+'ie.document.getElementById("1st-ib").Value = "Cheese"
+'ie.document.getElementById("btnK").Click
+
+End With
+End Sub
